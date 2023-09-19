@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var order = Order()
     
     var body: some View {
@@ -16,7 +15,7 @@ struct ContentView: View {
             Form {
                 Section {
                     Picker("Select your cake type", selection: $order.type) {
-                        ForEach(Order.types.indices) {
+                        ForEach(Order.types.indices, id: \.self) {
                             Text(Order.types[$0])
                         }
                     }
