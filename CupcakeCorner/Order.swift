@@ -47,8 +47,6 @@ class Order: ObservableObject, Codable {
         // $2 per cake
         var cost = Double(quantity) * 2
 
-//        // complicated cakes cost more
-//        cost += (Double(type) / 2)
 
         // $1/cake for extra frosting
         if extraFrosting {
